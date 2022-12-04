@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OutputActivity"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/tKembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/back"
+        android:fontFamily="@font/semibold"
+        android:text="Kembali"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tKembali"
+        android:layout_marginTop="13dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/tHasil"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#7A3E26"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/g_bold"
+                android:text="HASIL KLASIFIKASI"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/gambar"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/regular"
+                android:text="Jenis Motif:"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/hasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/semibold"
+                android:text=""
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#F3F3F3" />
+
+<!--            <Button-->
+<!--                android:id="@+id/kembaliBtn"-->
+<!--                android:layout_width="180dp"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:layout_below="@id/view"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:backgroundTint="#ffc857"-->
+<!--                android:fontFamily="@font/g_bold"-->
+<!--                android:text="Kembali"-->
+<!--                android:textSize="14dp"-->
+<!--                app:cornerRadius="25dp" />-->
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/akaya_telivigala</item>
+        <item>@font/berkshire_swash</item>
+        <item>@font/cookie</item>
+        <item>@font/courgette</item>
+        <item>@font/croissant_one</item>
+        <item>@font/eagle_lake</item>
+        <item>@font/gurajada</item>
+        <item>@font/katibeh</item>
+        <item>@font/norican</item>
+    </array>
+</resources>
