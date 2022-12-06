@@ -1,185 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:padding="15dp"
     android:background="@drawable/background2">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/ic_logout" />
-
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="10dp"
-        app:cardUseCompatPadding="true"
-        android:layout_centerVertical="true"
-        android:elevation="10dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_logout" />
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_centerInParent="true"-->
-<!--                android:fontFamily="@font/g_bold"-->
-<!--                android:text="Klasifikasi Batik"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="25sp" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_centerInParent="true"-->
-<!--                android:layout_marginTop="50dp"-->
-<!--                android:fontFamily="@font/regular"-->
-<!--                android:text="Aplikasi ini dirancang untuk dapat melakukan klasifikasi terhadap gambar motif batik nusantara. Melalui aplikasi ini diharapkan user dapat mengenal beragam jenis motif batik yang ada di Indonesia."-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="14sp" />-->
-
-            <ImageView
-                android:layout_width="370sp"
-                android:layout_height="370sp"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/imageView"
-                android:layout_marginTop="10sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="*hasil*"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="27sp"
-                android:id="@+id/result"
-                android:layout_below="@+id/classified" />
-
-            <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:columnCount="2"
-                android:rowCount="1">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/button"
-                    android:layout_width="100dp"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    android:layout_margin="12dp">
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/g_bold"
+                    android:text="Klasifikasi Batik"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="15dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/ic_camera" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/regular"
-                            android:text="Kamera"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/button2"
-                    android:layout_width="100dp"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    android:layout_margin="12dp">
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/regular"
+                    android:text="Aplikasi ini dirancang untuk dapat melakukan klasifikasi terhadap gambar motif batik nusantara. Melalui aplikasi ini diharapkan user dapat mengenal beragam jenis motif batik yang ada di Indonesia."
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="310sp"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_marginTop="60sp"
+                    android:background="@drawable/frame"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="15dp">
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_image"/>
+                </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/ic_photo_library" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/hresult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:text="Jenis Motif:"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hresult"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/regular"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#F3F3F3"
+                        android:layout_below="@id/result"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/regular"
+                    android:text="Pilih salah satu opsi pengambilan gambar berikut ini."
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:columnCount="2"
+                    android:rowCount="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/button"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/regular"
-                            android:text="Galeri"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-                    </LinearLayout>
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="15dp">
 
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_camera" />
 
-            </GridLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Kamera"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
 
-<!--            <Button-->
-<!--                android:id="@+id/button"-->
-<!--                android:layout_width="180dp"-->
-<!--                android:layout_height="55dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginTop="100dp"-->
-<!--                android:backgroundTint="#7A3E26"-->
-<!--                android:fontFamily="@font/g_bold"-->
-<!--                android:text="Ambil Gambar"-->
-<!--                android:textSize="14dp"-->
-<!--                app:cornerRadius="25dp" />-->
+                        </LinearLayout>
 
-<!--            <Button-->
-<!--                android:id="@+id/button2"-->
-<!--                android:layout_width="180dp"-->
-<!--                android:layout_height="55dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:backgroundTint="#ffc857"-->
-<!--                android:fontFamily="@font/g_bold"-->
-<!--                android:text="Import Gambar"-->
-<!--                android:textSize="14dp"-->
-<!--                app:cornerRadius="25dp" />-->
+                    </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:src="@drawable/ic_arrow_down" />-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/button2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp">
 
-</RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_photo_library" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Galeri"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <!--            <Button-->
+                <!--                android:id="@+id/button"-->
+                <!--                android:layout_width="180dp"-->
+                <!--                android:layout_height="55dp"-->
+                <!--                android:layout_gravity="center"-->
+                <!--                android:layout_marginTop="100dp"-->
+                <!--                android:backgroundTint="#7A3E26"-->
+                <!--                android:fontFamily="@font/g_bold"-->
+                <!--                android:text="Ambil Gambar"-->
+                <!--                android:textSize="14dp"-->
+                <!--                app:cornerRadius="25dp" />-->
+
+                <!--            <Button-->
+                <!--                android:id="@+id/button2"-->
+                <!--                android:layout_width="180dp"-->
+                <!--                android:layout_height="55dp"-->
+                <!--                android:layout_gravity="center"-->
+                <!--                android:backgroundTint="#ffc857"-->
+                <!--                android:fontFamily="@font/g_bold"-->
+                <!--                android:text="Import Gambar"-->
+                <!--                android:textSize="14dp"-->
+                <!--                app:cornerRadius="25dp" />-->
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!--    <ImageView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_alignParentBottom="true"-->
+        <!--        android:layout_centerHorizontal="true"-->
+        <!--        android:src="@drawable/ic_arrow_down" />-->
+
+    </RelativeLayout>
+
+</ScrollView>
