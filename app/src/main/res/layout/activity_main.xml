@@ -36,37 +36,142 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:fontFamily="@font/g_bold"
-                android:text="Klasifikasi Batik"
-                android:textColor="@color/black"
-                android:textSize="25sp" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:fontFamily="@font/g_bold"-->
+<!--                android:text="Klasifikasi Batik"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="25sp" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:fontFamily="@font/regular"-->
+<!--                android:text="Aplikasi ini dirancang untuk dapat melakukan klasifikasi terhadap gambar motif batik nusantara. Melalui aplikasi ini diharapkan user dapat mengenal beragam jenis motif batik yang ada di Indonesia."-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="14sp" />-->
+
+            <ImageView
+                android:layout_width="370sp"
+                android:layout_height="370sp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageView"
+                android:layout_marginTop="10sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:text="*hasil*"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="27sp"
+                android:id="@+id/result"
+                android:layout_below="@+id/classified" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:fontFamily="@font/regular"
-                android:text="Aplikasi ini dirancang untuk dapat melakukan klasifikasi terhadap gambar motif batik nusantara. Melalui aplikasi ini diharapkan user dapat mengenal beragam jenis motif batik yang ada di Indonesia."
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:columnCount="2"
+                android:rowCount="1">
 
-            <Button
-                android:id="@+id/inputBtn"
-                android:layout_width="180dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="100dp"
-                android:backgroundTint="#7A3E26"
-                android:fontFamily="@font/g_bold"
-                android:text="Ambil Gambar"
-                android:textSize="14dp"
-                app:cornerRadius="25dp" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/button"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_margin="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_camera" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="Kamera"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/button2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_margin="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_photo_library" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="Galeri"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+<!--            <Button-->
+<!--                android:id="@+id/button"-->
+<!--                android:layout_width="180dp"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="100dp"-->
+<!--                android:backgroundTint="#7A3E26"-->
+<!--                android:fontFamily="@font/g_bold"-->
+<!--                android:text="Ambil Gambar"-->
+<!--                android:textSize="14dp"-->
+<!--                app:cornerRadius="25dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button2"-->
+<!--                android:layout_width="180dp"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:backgroundTint="#ffc857"-->
+<!--                android:fontFamily="@font/g_bold"-->
+<!--                android:text="Import Gambar"-->
+<!--                android:textSize="14dp"-->
+<!--                app:cornerRadius="25dp" />-->
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
