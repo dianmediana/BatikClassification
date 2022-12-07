@@ -47,9 +47,10 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/g_bold"
-                    android:text="Klasifikasi Batik"
+                    android:text="Gotique"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -73,8 +74,8 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
                         android:layout_centerHorizontal="true"
                         android:src="@drawable/ic_image"/>
                 </LinearLayout>
