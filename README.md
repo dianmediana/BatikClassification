@@ -7,6 +7,8 @@ Google Colab : https://colab.research.google.com/drive/1-1v2tATCgS_HpEDOrCN9fKmz
 
 Percobaan model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
 
+Percobaan model vgg-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHwE9NQFviZSuUoKtL4r?usp=sharing
+
 Percobaan model fully CNN: https://colab.research.google.com/drive/1VXwiIRC8XTVNQtuLJMgTSHeI5uroriDt?usp=sharing
 
 # Batik Classification
