@@ -1,7 +1,6 @@
 package com.dianmediana.batikclassification;
 
 import android.Manifest;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -9,7 +8,6 @@ import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,13 +15,10 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.dianmediana.batikclassification.ml.Model;
-import com.dianmediana.batikclassification.ml.ModelDatasetbaruBaru;
-import com.dianmediana.batikclassification.ml.ModelDatasetbaruVgg16;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -34,7 +29,7 @@ import java.nio.ByteOrder;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imageView, logout;
+    ImageView imageView;
     TextView result;
     int imageSize = 224;
 
@@ -46,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
         result = findViewById(R.id.result);
         imageView = findViewById(R.id.imageView);
-        logout = findViewById(R.id.logout);
 
         CardView camera = findViewById(R.id.button);
         camera.setOnClickListener(new View.OnClickListener() {
@@ -70,49 +64,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(cameraIntent, 1);
             }
         });
-
-        CardView realtime = findViewById(R.id.button3);
-        realtime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PreviewView.class);
-                startActivity(intent);
-            }
-        });
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
-                alertDialogBuilder.setTitle("Exit Application?");
-                alertDialogBuilder
-                        .setMessage("Click yes to exit!")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        moveTaskToBack(true);
-                                        android.os.Process.killProcess(android.os.Process.myPid());
-                                        System.exit(1);
-                                    }
-                                })
-
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-
-                AlertDialog alertDialog = alertDialogBuilder.create();
-                alertDialog.show();
-            }
-        });
     }
 
     public void classifyImage(Bitmap image){
         try {
-            ModelDatasetbaruBaru model = ModelDatasetbaruBaru.newInstance(getApplicationContext());
-//            Model model = Model.newInstance(getApplicationContext());
+            Model model = Model.newInstance(getApplicationContext());
 
             // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
@@ -136,10 +92,8 @@ public class MainActivity extends AppCompatActivity {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-//            ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
-//            TensorBuffer outputFeature0 = ((ModelDatasetbaruBaru.Outputs) outputs).getOutputFeature0AsTensorBuffer();
-            ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
-            TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
+            Model.Outputs outputs = model.process(inputFeature0);
+            TensorBuffer outputFeature0 = ((Model.Outputs) outputs).getOutputFeature0AsTensorBuffer();
 
             float[] confidences = outputFeature0.getFloatArray();
             // find the index of the class with the biggest confidence.
@@ -150,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
                     maxConfidence = confidences[i];
                     maxPos = i;
                 }
-            }String[] classes = {"Batik Bali", "Batik Betawi", "Batik Celup", "Batik Cendrawasih", "Batik Dayak","Batik Geblek Renteng",
-                    "Batik Insang", "Batik Kawung", "Batik Lasem", "Batik Megamendung", "Batik Pala", "Batik Parang",
-                    "Batik Poleng", "Batik Sekar Jagad", "Batik Tambal"};
+            }String[] classes = {"Batik Tambal", "Batik Sekar Jagad", "Batik Poleng", "Batik Parang", "Batik Pala","Batik Megamendung",
+                    "Batik Lasem", "Batik Kawung", "Batik Insang", "Batik Ikat Celup", "Batik Geblek Renteng", "Batik Dayak",
+                    "Batik Cendrawasih", "Batik Betawi", "Batik Bali"};
             result.setText(classes[maxPos]);
 
             // Releases model resources if no longer used.
@@ -189,31 +143,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
-    public void onBackPressed() {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Exit Application?");
-        alertDialogBuilder
-                .setMessage("Click yes to exit!")
-                .setCancelable(false)
-                .setPositiveButton("Yes",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                moveTaskToBack(true);
-                                android.os.Process.killProcess(android.os.Process.myPid());
-                                System.exit(1);
-                            }
-                        })
-
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
     }
 }
