@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.dianmediana.batikclassification.ml.Model;
+import com.dianmediana.batikclassification.ml.ModelDatasetbaruBaru;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void classifyImage(Bitmap image){
         try {
-            Model model = Model.newInstance(getApplicationContext());
+            ModelDatasetbaruBaru model = ModelDatasetbaruBaru.newInstance(getApplicationContext());
 
             // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
@@ -92,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-            Model.Outputs outputs = model.process(inputFeature0);
-            TensorBuffer outputFeature0 = ((Model.Outputs) outputs).getOutputFeature0AsTensorBuffer();
+            ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
+            TensorBuffer outputFeature0 = ((ModelDatasetbaruBaru.Outputs) outputs).getOutputFeature0AsTensorBuffer();
 
             float[] confidences = outputFeature0.getFloatArray();
             // find the index of the class with the biggest confidence.
@@ -104,9 +105,9 @@ public class MainActivity extends AppCompatActivity {
                     maxConfidence = confidences[i];
                     maxPos = i;
                 }
-            }String[] classes = {"Batik Tambal", "Batik Sekar Jagad", "Batik Poleng", "Batik Parang", "Batik Pala","Batik Megamendung",
-                    "Batik Lasem", "Batik Kawung", "Batik Insang", "Batik Ikat Celup", "Batik Geblek Renteng", "Batik Dayak",
-                    "Batik Cendrawasih", "Batik Betawi", "Batik Bali"};
+            }String[] classes = {"Batik Bali", "Batik Betawi", "Batik Celup", "Batik Cendrawasih","Batik Dayak",
+                    "Batik Geblek Renteng", "Batik Insang", "Batik Kawung", "Batik Lasem", "Batik Megamendung", "Batik Pala",
+                    "Batik Parang", "Batik Poleng", "Batik Sekar Jagad", "Batik Tambal"};
             result.setText(classes[maxPos]);
 
             // Releases model resources if no longer used.
