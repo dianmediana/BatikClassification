@@ -47,14 +47,14 @@ No | Nama Batik | Jumlah Gambar |
 | 13 | Batik Poleng | 69 |
 | 14 | Batik Sekar Jagad | 69 |
 | 15 | Batik Tambal | 76 |
-| **TOTAL**  | 894 |
+| | **TOTAL**  | 894 |
 
 ## Penjelasan Algoritma
 ### Algoritma Fully CNN
 
 ### Algoritma EffiecienNetB0
 
-## Agoritma VGG16
+### Agoritma VGG16
 
 ## Proses Training dan Testing
 
