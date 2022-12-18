@@ -27,6 +27,27 @@ Percobaan model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHw
 ## Arsitektur Aplikasi
 
 ## Dataset
+Dataset yang digunakan adalah dataset gambar batik yang dikumpulkan manual dari google image yang terdiri 15 jenis batik. Berikut dapat dilihat 15 jenis batik tersebut pada tabel di bawah:
+
+No | Nama Batik | Jumlah Gambar | 
+| - | ---------- | -- |
+| 1 | Batik Bali | 50 |
+| 2 | Batik Betawi | 50 |
+| 3 | Batik Celup | 95 |
+| 4 | Batik Cendrawasih | 49 |
+| 5 | Batik Dayak | 77 |
+| 6 | Batik Geblek Renteng | 59 |
+| 7 | Batik Insang | 50 |
+| 8 | Batik Kawung | 50 |
+| 9 | Batik Lasem | 50 |
+| 10 | Batik Megamedung | 50 |
+| 11 | Batik Pala | 50 |
+| 12 | Batik Parang | 50 |
+| 13 | Batik Poleng | 69 |
+| 14 | Batik Sekar Jagad | 69 |
+| 15 | Batik Tambal | 76 |
+| **TOTAL** | | 894 |
+
 
 ## Algoritma CNN
 
