@@ -49,7 +49,11 @@ No | Nama Batik | Jumlah Gambar |
 | **TOTAL** | | 894 |
 
 
-## Algoritma CNN
+## Algoritma Fully CNN
+
+## Algoritma EffiecienNetB0
+
+## Agoritma VGG16
 
 ## Proses Training dan Testing
 
