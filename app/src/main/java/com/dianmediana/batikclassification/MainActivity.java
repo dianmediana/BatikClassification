@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,10 +33,12 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
+import android.util.Log;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView imageView, logout;
-    TextView result;
+    TextView result, vconfidence;
     int imageSize = 224;
 
     @Override
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         result = findViewById(R.id.result);
         imageView = findViewById(R.id.imageView);
         logout = findViewById(R.id.logout);
+        vconfidence = findViewById(R.id.confidence);
 
         CardView camera = findViewById(R.id.button);
         camera.setOnClickListener(new View.OnClickListener() {
@@ -112,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
     public void classifyImage(Bitmap image){
         try {
             ModelDatasetbaruBaru model = ModelDatasetbaruBaru.newInstance(getApplicationContext());
-//            Model model = Model.newInstance(getApplicationContext());
 
             // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
@@ -136,8 +139,6 @@ public class MainActivity extends AppCompatActivity {
             inputFeature0.loadBuffer(byteBuffer);
 
             // Runs model inference and gets result.
-//            ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
-//            TensorBuffer outputFeature0 = ((ModelDatasetbaruBaru.Outputs) outputs).getOutputFeature0AsTensorBuffer();
             ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
@@ -154,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
                     "Batik Insang", "Batik Kawung", "Batik Lasem", "Batik Megamendung", "Batik Pala", "Batik Parang",
                     "Batik Poleng", "Batik Sekar Jagad", "Batik Tambal"};
             result.setText(classes[maxPos]);
+            System.out.println("Confidence: " + maxConfidence);
+            vconfidence.setText(String.valueOf(String.format("%.2f", maxConfidence)));
 
             // Releases model resources if no longer used.
             model.close();
@@ -183,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 imageView.setImageBitmap(image);
 
-//                image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
                 image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
                 classifyImage(image);
             }

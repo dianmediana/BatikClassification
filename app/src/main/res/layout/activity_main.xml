@@ -85,20 +85,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp">
 
-                    <TextView
-                        android:id="@+id/hresult"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/regular"
-                        android:text="Jenis Motif:"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/hresult"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/regular"-->
+<!--                        android:text="Jenis Motif:"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp" />-->
 
                     <TextView
                         android:id="@+id/result"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/hresult"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/regular"
@@ -107,12 +106,25 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
+                    <TextView
+                        android:id="@+id/confidence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/result"
+                        android:layout_centerHorizontal="true"
+                        android:text=" "
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/regular"
+                        android:textStyle="bold"/>
+
                     <View
+                        android:id="@+id/view"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:layout_below="@id/confidence"
                         android:layout_marginTop="5dp"
-                        android:background="#F3F3F3"
-                        android:layout_below="@id/result"/>
+                        android:background="#F3F3F3" />
 
                 </RelativeLayout>
 
