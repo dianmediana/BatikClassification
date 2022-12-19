@@ -2,11 +2,11 @@ package com.dianmediana.batikclassification;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.camera.core.CameraSelector;
-import androidx.camera.core.ImageAnalysis;
-import androidx.camera.core.ImageProxy;
-import androidx.camera.core.Preview;
-import androidx.camera.lifecycle.ProcessCameraProvider;
+//import androidx.camera.core.CameraSelector;
+//import androidx.camera.core.ImageAnalysis;
+//import androidx.camera.core.ImageProxy;
+//import androidx.camera.core.Preview;
+//import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
@@ -14,7 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.google.common.util.concurrent.ListenableFuture;
+//import com.google.common.util.concurrent.ListenableFuture;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
