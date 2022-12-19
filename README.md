@@ -51,7 +51,12 @@ No | Nama Batik | Jumlah Gambar |
 
 ### Algoritma EffiecienNetB0
 
-### Agoritma VGG16
+### Algoritma VGG16
+
+#### Definisi Algoritma VGG16
+
+##### VGG16 memiliki total layer 16 yaitu 13 layer convolution dan 3 layer fully connected. VGG16 menggunakan konsep blok untuk membentuk Convolution layer yang masing-masing convolution layer nya memiliki ukuran 3 x 3 dan stride 1. Pada akhir blok, digunakan max pooling layer dengan ukuran 2 x 2 dan stride 2.
+
 
 ## Proses Training dan Testing
 
