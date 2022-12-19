@@ -48,7 +48,6 @@ No | Nama Batik | Jumlah Gambar |
 | | **TOTAL**  | 894 |
 
 ## Penjelasan Algoritma
-### Algoritma Fully CNN
 
 ### Algoritma EffiecienNetB0
 
