@@ -3,8 +3,6 @@ Model deep learning ini dirancang untuk melakukan klasifikasi terhadap gambar ba
 
 Jenis Batik : Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, dll 
 
-Percobaan model Fully CNN : https://colab.research.google.com/drive/1W45UW33EXgcLmJpxnoRO_dRBu-P4qLaI?usp=sharing
-
 Percobaan model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
 
 Percobaan model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHwE9NQFviZSuUoKtL4r?usp=sharing
@@ -50,7 +48,6 @@ No | Nama Batik | Jumlah Gambar |
 | | **TOTAL**  | 894 |
 
 ## Penjelasan Algoritma
-### Algoritma Fully CNN
 
 ### Algoritma EffiecienNetB0
 
