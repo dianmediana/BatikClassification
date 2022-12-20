@@ -16,6 +16,7 @@
   - [Proses Training dan Testing](#proses-training-dan-testing)
   - [Analisis Model dan Hasil Evaluasi](#analisis-model-dan-hasil-evaluasi)
   - [Link Project Google Colab](#link-project-google-colab)
+  - [Daftar Pustaka](#daftar-pustaka)
   
 
 ## Deskripsi Aplikasi
@@ -93,18 +94,23 @@ No | Nama Batik | Jumlah Gambar |
 
 ## Model Deep Learning
 ### Algoritma EffiecientNet
-#### EfficientNet merupakan salah satu arsitektur pada Convolutional Neural Network (CNN) yang dikembangkan oleh tim Google Brain. EfficientNet menggunakan model scaling, yaitu melakukan penskalaan pada model [1] dengan menggabungkan skala width (penambahan jumlah feature map pada layer), depth (penambahan jumlah layer CNN), dan resolusi (meningkatkan resolusi input image) yang disebut sebagai compound scaling yang bertujuan untuk memperbaiki performa model [2]. Penskalaan ini menyebabkan EfficientNet tidak memerlukan kebutuhan komputasi sebanyak yang dibutuhkan CNN konvensional, sehingga dapat menghasilkan nilai akurasi yang lebih baik [3]. Pada project ini, kami menggunakan EfficientNet-B0 yang merupakan baseline model dari arsitektur EfficientNet. Selain itu, menurut [4] arsitektur EfficientNet-B0 dipilih karena memiliki jumlah parameter yang paling sedikit, sehingga memiliki waktu training yang lebih cepat dibandingkan dengan arsitektur EfficientNet yang lain. Berikut merupakan arsitektur dari EfficientNet.
+EfficientNet merupakan salah satu arsitektur pada Convolutional Neural Network (CNN) yang dikembangkan oleh tim Google Brain. EfficientNet menggunakan model scaling, yaitu melakukan penskalaan pada model [1] dengan menggabungkan skala width (penambahan jumlah feature map pada layer), depth (penambahan jumlah layer CNN), dan resolusi (meningkatkan resolusi input image) yang disebut sebagai compound scaling yang bertujuan untuk memperbaiki performa model [2]. Penskalaan ini menyebabkan EfficientNet tidak memerlukan kebutuhan komputasi sebanyak yang dibutuhkan CNN konvensional, sehingga dapat menghasilkan nilai akurasi yang lebih baik [3]. Pada project ini, kami menggunakan EfficientNet-B0 yang merupakan baseline model dari arsitektur EfficientNet. Selain itu, menurut [4] arsitektur EfficientNet-B0 dipilih karena memiliki jumlah parameter yang paling sedikit, sehingga memiliki waktu training yang lebih cepat dibandingkan dengan arsitektur EfficientNet yang lain. Berikut merupakan arsitektur dari EfficientNet.
 
 ![image](https://user-images.githubusercontent.com/80681345/208716364-30d8bde6-c4e0-4c2d-b4a2-e8ad13709e3c.png)
-#### Gambar di atas menunjukkan bahwa arsitektur EfficientNet-B0 terdiri dari beberapa layer. Layer pertama adalah Convolutional Layer dengan input size sebesar 224 x 224. Lalu, dilanjutkan dengan Mobile Bottlenect Convolutional Layer yang terdiri dari 7 blok. 
+
+Gambar di atas menunjukkan bahwa arsitektur EfficientNet-B0 terdiri dari beberapa layer. Layer pertama adalah Convolutional Layer dengan input size sebesar 224 x 224. Lalu, dilanjutkan dengan Mobile Bottlenect Convolutional Layer yang terdiri dari 7 blok. 
 
 ### Algoritma VGG16
-#####     VGG16 Merupakan hasil pengembangan dari Alexnet, di mana arsitektur ini berfokus pada memperbanyak proses fitur ekstraksi pada layer convolution, sehingga mampu mendapatkan representasi citra yang banyak untuk dapat diklasifikasikan. VGG16 memiliki total layer 16, yaitu 13 layer convolution dan 3 layer fully connected. VGG16 menggunakan konsep blok untuk membentuk convolution layer yang masing-masing convolution layernya memiliki ukuran 3 x 3 dan stride 1. Pada akhir blok, digunakan max pooling layer dengan ukuran 2 x 2 dan stride 2. Berikut merupakan arsitektur dari VGG16.
+VGG16 Merupakan hasil pengembangan dari Alexnet, di mana arsitektur ini berfokus pada memperbanyak proses fitur ekstraksi pada layer convolution, sehingga mampu mendapatkan representasi citra yang banyak untuk dapat diklasifikasikan. VGG16 memiliki total layer 16, yaitu 13 layer convolution dan 3 layer fully connected. VGG16 menggunakan konsep blok untuk membentuk convolution layer yang masing-masing convolution layernya memiliki ukuran 3 x 3 dan stride 1. Pada akhir blok, digunakan max pooling layer dengan ukuran 2 x 2 dan stride 2. Berikut merupakan arsitektur dari VGG16.
 
 ![image](https://user-images.githubusercontent.com/83971650/208709474-ac6d88d0-d590-4ec5-8f5c-5e8651c921b7.png)
 
 
 ## Proses Training dan Testing
+### Model EffiecientNet
+#### Proses Training
+#### Proses Testing
+
 
 ## Analisis Model dan Hasil Evaluasi
 
@@ -113,3 +119,10 @@ No | Nama Batik | Jumlah Gambar |
 #### Model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
 
 #### Model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHwE9NQFviZSuUoKtL4r?usp=sharing
+
+## Daftar Pustaka
+[1]	N. Azahro Choirunisa, T. Karlita, and R. Asmara, “Deteksi Ras Kucing Menggunakan Compound Model Scaling Convolutional Neural Network,” Technomedia J., vol. 6, no. 2, pp. 236–251, 2021, doi: 10.33050/tmj.v6i2.1704.
+[2]	G. Kim and C. Lee, “Convolutional Neural Network Using Convolutional Neural Network,” Springer, vol. 2644, no. 2, pp. 747–749, 2016, [Online]. Available: https://link.springer.com/chapter/10.1007/978-1-4842-2845-6_6
+[3]	I. N. Alam, “METODE TRANSFER LEARNING PADA DEEP CONVOLUTIONAL NEURAL NETWORK ( DCNN ) UNTUK PENGENALAN EKSPRESI WAJAH METODE TRANSFER LEARNING PADA DEEP CONVOLUTIONAL NEURAL NETWORK ( DCNN ),” no. October, 2022.
+[4]	S. A. Sabrina and W. F. Al Maki, “Klasifikasi Penyakit Pada Tanaman Kopi Robusta Berdasarkan Citra Daun Menggunakan Convolutional Neural Network,” eProceedings …, vol. 9, no. 3, pp. 1919–1927, 2022, [Online]. Available: https://openlibrarypublications.telkomuniversity.ac.id/index.php/engineering/article/view/17997%0Ahttps://openlibrarypublications.telkomuniversity.ac.id/index.php/engineering/article/download/17997/17626
+
