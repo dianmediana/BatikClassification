@@ -34,10 +34,6 @@
         <activity
             android:name=".CameraActivity"
             android:exported="false" />
-        <activity
-            android:name=".PreviewView"
-            android:exported="false" />
-        <activity android:name=".OutputActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TakeImageOptionActivity" />
         <activity android:name=".MainActivity" />
 
         <meta-data

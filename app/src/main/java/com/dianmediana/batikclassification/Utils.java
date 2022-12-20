@@ -39,6 +39,7 @@ public class Utils {
         return rotation/90;
     }
 
+    //Mengubah citra ke bentuk Bitmap
     public static Bitmap toBitmap(Image image) {
         Image.Plane[] planes = image.getPlanes();
         ByteBuffer yBuffer = planes[0].getBuffer();

@@ -41,7 +41,7 @@ public class CameraActivity extends AppCompatActivity {
     private final String [] REQUIRED_PERMISSIONS = new String []{Manifest.permission.CAMERA};
 
     PreviewView mPreviewView;
-    TextView tvResults, tvConfidence;
+    TextView tvResults;
     int imageSize = 224;
     ModelDatasetbaruBaru model;
 
@@ -70,6 +70,7 @@ public class CameraActivity extends AppCompatActivity {
         }
     }
 
+    //Mulai membuka kamera untuk Fitur Realtime
     private void startCamera(){
 
         ListenableFuture<ProcessCameraProvider>
@@ -90,14 +91,13 @@ public class CameraActivity extends AppCompatActivity {
         );
     }
 
+    //Mengatur frame untuk menampilkan hasil klasifikasi pada frame
     void bindPreview(ProcessCameraProvider cameraProvider) throws IOException {
-
         Preview preview = new Preview.Builder().build();
         preview.setSurfaceProvider(mPreviewView.getSurfaceProvider());
 
         @SuppressLint("UnsafeOptInUsageError")
         ViewPort viewPort = mPreviewView.getViewPort();
-
         if(viewPort !=null){
             CameraSelector cameraSelector = new CameraSelector.Builder().requireLensFacing(
                     CameraSelector.LENS_FACING_BACK).build();
@@ -131,13 +131,14 @@ public class CameraActivity extends AppCompatActivity {
 
     }
 
+    //Memanggil model untuk melakukan klasifikasi image
     private String classifyImage(Image image, ModelDatasetbaruBaru model ) throws IOException {
 
         Bitmap img = Utils.toBitmap(image);
         img = Bitmap.createScaledBitmap(img, 224, 224, false);
 
         try {
-            // Creates inputs for reference.
+            // Mengatur inputan untuk klasifikasi
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * imageSize * imageSize * 3);
             byteBuffer.order(ByteOrder.nativeOrder());
@@ -145,7 +146,7 @@ public class CameraActivity extends AppCompatActivity {
             int[] intValues = new int[imageSize * imageSize];
             img.getPixels(intValues, 0, img.getWidth(), 0, 0, img.getWidth(), img.getHeight());
             int pixel = 0;
-            //iterate over each pixel and extract R, G, and B values. Add those values individually to the byte buffer.
+            //Melakukan iterasi pada setiap pixel dan ekstrak R, G dan B. Lalu Tambahkan nilai tersebut satu per satu ke buffer byte.
             for (int i = 0; i < imageSize; i++) {
                 for (int j = 0; j < imageSize; j++) {
                     int val = intValues[pixel++]; // RGB
@@ -155,13 +156,12 @@ public class CameraActivity extends AppCompatActivity {
                 }
             }
 
-//            inputFeature0.loadBuffer(byteBuffer);
             inputFeature0.loadBuffer(byteBuffer);
-            // Runs model inference and gets result.
+            //Menjalankan model unruk klasifikasi.
             ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
             float[] confidences = outputFeature0.getFloatArray();
-            // find the index of the class with the biggest confidence.
+            //Mencari indeks kelas dengan tingkat confidence paling tinggi
             int maxPos = 0;
             float maxConfidence = 0;
             for (int i = 0; i < confidences.length; i++) {
@@ -174,7 +174,6 @@ public class CameraActivity extends AppCompatActivity {
                     "Batik Insang", "Batik Kawung", "Batik Lasem", "Batik Megamendung", "Batik Pala", "Batik Parang",
                     "Batik Poleng", "Batik Sekar Jagad", "Batik Tambal"};
 
-            // Releases model resources if no longer used.
             Log.d("clasify", classes[maxPos]);
             return classes[maxPos]  + " " + String.valueOf(String.format("%.2f", maxConfidence));
         } catch (Exception e) {
@@ -183,6 +182,7 @@ public class CameraActivity extends AppCompatActivity {
         return null;
     }
 
+    //Mengatur ijin penggunaan camera
     private boolean allPermissionsGranted(){
         for(String permission: REQUIRED_PERMISSIONS){
             if(ContextCompat.checkSelfPermission(
@@ -193,6 +193,7 @@ public class CameraActivity extends AppCompatActivity {
         return true;
     }
 
+    //Menampilkan hasil ijin penggunaan kamera
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
@@ -207,10 +208,12 @@ public class CameraActivity extends AppCompatActivity {
             }
         }
     }
+
+    //Mengakhiri model ketika frame dikembalikan ke tampilan utama
     @Override
     public void onBackPressed() {
         model.close();
-
-
+        finish();
     }
+
 }
