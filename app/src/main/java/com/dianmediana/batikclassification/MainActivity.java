@@ -25,6 +25,7 @@ import androidx.cardview.widget.CardView;
 import com.dianmediana.batikclassification.ml.Model;
 import com.dianmediana.batikclassification.ml.ModelDatasetbaruBaru;
 import com.dianmediana.batikclassification.ml.ModelDatasetbaruVgg16;
+import com.dianmediana.batikclassification.ml.ModelEfnetTerbaru;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     TextView result, vconfidence;
     int imageSize = 224;
 
+    // Fungsi untuk membuka kamera pada fitur kamera, membuka galeri untuk fitur galeri,
+    // beralih ke class CameraActivity untuk fitur real-time, dan mengatur logout aplikasi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,11 +116,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Mengklasifikasi inputan gambar menggunakan model
     public void classifyImage(Bitmap image){
         try {
-            ModelDatasetbaruBaru model = ModelDatasetbaruBaru.newInstance(getApplicationContext());
+            // Buat variabel Model Tensor Flow Lite dan inisialisasi
+            ModelEfnetTerbaru model = ModelEfnetTerbaru.newInstance(getApplicationContext());
 
-            // Creates inputs for reference.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * imageSize * imageSize * 3);
             byteBuffer.order(ByteOrder.nativeOrder());
@@ -125,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
             int[] intValues = new int[imageSize * imageSize];
             image.getPixels(intValues, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
             int pixel = 0;
-            //iterate over each pixel and extract R, G, and B values. Add those values individually to the byte buffer.
+            // Ulangi setiap piksel dan ekstrak nilai R, G, dan B. Tambahkan nilai-nilai tersebut satu per satu ke buffer byte
             for(int i = 0; i < imageSize; i ++){
                 for(int j = 0; j < imageSize; j++){
                     int val = intValues[pixel++]; // RGB
@@ -135,15 +139,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-//            inputFeature0.loadBuffer(byteBuffer);
             inputFeature0.loadBuffer(byteBuffer);
 
-            // Runs model inference and gets result.
-            ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
+            // Menjalankan model dan mendapatkan hasil
+            ModelEfnetTerbaru.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
             float[] confidences = outputFeature0.getFloatArray();
-            // find the index of the class with the biggest confidence.
+            // Mencari indeks kelas dengan nilai confidence terbesar
             int maxPos = 0;
             float maxConfidence = 0;
             for (int i = 0; i < confidences.length; i++) {
@@ -158,16 +161,18 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("Confidence: " + maxConfidence);
             vconfidence.setText(String.valueOf(String.format("%.2f", maxConfidence)));
 
-            // Releases model resources if no longer used.
+            // Close model jika tidak lagi digunakan
             model.close();
         } catch (IOException e) {
             // TODO Handle the exception
         }
     }
 
+    // Pengambilan gambar dengan fitur kamera dan galeri
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(resultCode == RESULT_OK){
+            // Pengambilan gambar untuk fitur kamera
             if(requestCode == 3){
                 Bitmap image = (Bitmap) data.getExtras().get("data");
                 int dimension = Math.min(image.getWidth(), image.getHeight());
@@ -176,6 +181,8 @@ public class MainActivity extends AppCompatActivity {
 
                 image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
                 classifyImage(image);
+
+            // Pengambilan gambar untuk fitur galeri
             }else{
                 Uri dat = data.getData();
                 Bitmap image = null;
@@ -193,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    // Fungsi tombol kembali untuk keluar dari aplikasi
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

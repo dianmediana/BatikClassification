@@ -13,8 +13,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.camera.core.Camera;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageAnalysis;
+import androidx.camera.core.ImageCapture;
 import androidx.camera.core.ImageProxy;
 import androidx.camera.core.Preview;
 import androidx.camera.core.ViewPort;
@@ -24,6 +26,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.dianmediana.batikclassification.ml.ModelDatasetbaruBaru;
+import com.dianmediana.batikclassification.ml.ModelEfnetTerbaru;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import org.tensorflow.lite.DataType;
@@ -43,27 +46,27 @@ public class CameraActivity extends AppCompatActivity {
     PreviewView mPreviewView;
     TextView tvResults;
     int imageSize = 224;
-    ModelDatasetbaruBaru model;
+    ModelEfnetTerbaru model;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
+        getSupportActionBar().hide();
 
         mPreviewView = findViewById(R.id.viewFinder);
         tvResults = findViewById(R.id.tvResults);
+
         try {
-            model = ModelDatasetbaruBaru.newInstance(getApplicationContext());
+            model = ModelEfnetTerbaru.newInstance(getApplicationContext());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         if (allPermissionsGranted()){
             startCamera();
-        }
-        else{
+        } else {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS,
                     REQUEST_CODE_PERMISSIONS);
         }
@@ -71,7 +74,6 @@ public class CameraActivity extends AppCompatActivity {
 
     //Mulai membuka kamera untuk Fitur Realtime
     private void startCamera(){
-
         ListenableFuture<ProcessCameraProvider>
                 cameraProviderFuture = ProcessCameraProvider.getInstance(this);
         cameraProviderFuture.addListener(
@@ -92,47 +94,40 @@ public class CameraActivity extends AppCompatActivity {
 
     //Mengatur frame untuk menampilkan hasil klasifikasi pada frame
     void bindPreview(ProcessCameraProvider cameraProvider) throws IOException {
+        ImageCapture.Builder builder = new ImageCapture.Builder();
+        ImageCapture imageCapture = builder.build();
         Preview preview = new Preview.Builder().build();
         preview.setSurfaceProvider(mPreviewView.getSurfaceProvider());
 
-        @SuppressLint("UnsafeOptInUsageError")
-        ViewPort viewPort = mPreviewView.getViewPort();
-        if(viewPort !=null){
-            CameraSelector cameraSelector = new CameraSelector.Builder().requireLensFacing(
-                    CameraSelector.LENS_FACING_BACK).build();
-            ImageAnalysis imageAnalysis =
-                    new ImageAnalysis.Builder()
-                            .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
-                            .build();
+        CameraSelector cameraSelector = new CameraSelector.Builder().requireLensFacing(
+                CameraSelector.LENS_FACING_BACK).build();
+        ImageAnalysis imageAnalysis =
+                new ImageAnalysis.Builder()
+                        .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                        .build();
 
-            imageAnalysis.setAnalyzer(ActivityCompat.getMainExecutor(this),
-                    new ImageAnalysis.Analyzer() {
-                        @Override
-                        public void analyze(@NonNull ImageProxy image) {
-                            String result = null;
-                            @SuppressLint("UnsafeOptInUsageError")
-                            Image img = image.getImage();
+        imageAnalysis.setAnalyzer(ActivityCompat.getMainExecutor(this),
+                new ImageAnalysis.Analyzer() {
+                    @Override
+                    public void analyze(@NonNull ImageProxy image) {
+                        String result = null;
+                        @SuppressLint("UnsafeOptInUsageError") Image img = image.getImage();
 
-                            try {
-                                result = classifyImage(img, model);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                            tvResults.setText(result);
-                            image.close();
+                        try {
+                            result = classifyImage(img, model);
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
-                    });
-
-            cameraProvider.unbindAll();
-            cameraProvider.bindToLifecycle(this, cameraSelector,
-                    preview, imageAnalysis);
-        }
-
+                        tvResults.setText(result);
+                        image.close();
+                    }
+                });
+        cameraProvider.bindToLifecycle(this, cameraSelector,
+                preview, imageAnalysis, imageCapture);
     }
 
     //Memanggil model untuk melakukan klasifikasi image
-    private String classifyImage(Image image, ModelDatasetbaruBaru model ) throws IOException {
-
+    private String classifyImage(Image image, ModelEfnetTerbaru model ) throws IOException {
         Bitmap img = Utils.toBitmap(image);
         img = Bitmap.createScaledBitmap(img, 224, 224, false);
 
@@ -157,7 +152,7 @@ public class CameraActivity extends AppCompatActivity {
 
             inputFeature0.loadBuffer(byteBuffer);
             //Menjalankan model unruk klasifikasi.
-            ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
+            ModelEfnetTerbaru.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
             float[] confidences = outputFeature0.getFloatArray();
             //Mencari indeks kelas dengan tingkat confidence paling tinggi
@@ -184,7 +179,7 @@ public class CameraActivity extends AppCompatActivity {
     //Mengatur ijin penggunaan camera
     private boolean allPermissionsGranted(){
         for(String permission: REQUIRED_PERMISSIONS){
-            if(ContextCompat.checkSelfPermission(
+            if (ContextCompat.checkSelfPermission(
                     this, permission) != PackageManager.PERMISSION_GRANTED){
                 return false;
             }
@@ -214,5 +209,4 @@ public class CameraActivity extends AppCompatActivity {
         model.close();
         finish();
     }
-
 }

@@ -52,23 +52,12 @@
                     android:textStyle="bold|italic"
                     android:layout_marginTop="10dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="30dp"
-                    android:fontFamily="@font/regular"
-                    android:text="Aplikasi ini dirancang untuk dapat melakukan klasifikasi terhadap gambar motif batik nusantara. Melalui aplikasi ini diharapkan user dapat mengenal beragam jenis motif batik yang ada di Indonesia."
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="310sp"
                     android:orientation="vertical"
                     android:padding="10dp"
-                    android:layout_marginTop="60sp"
+                    android:layout_marginTop="20sp"
                     android:background="@drawable/frame"
                     android:gravity="center">
 
@@ -84,15 +73,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp">
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/hresult"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:fontFamily="@font/regular"-->
-<!--                        android:text="Jenis Motif:"-->
-<!--                        android:textColor="@color/black"-->
-<!--                        android:textSize="14sp" />-->
 
                     <TextView
                         android:id="@+id/result"
@@ -133,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:fontFamily="@font/regular"
-                    android:text="Pilih salah satu opsi pengambilan gambar berikut ini."
+                    android:text="Pilih opsi pengambilan gambar."
                     android:textColor="@color/black"
                     android:textSize="12dp" />
 
@@ -246,37 +226,9 @@
 
                 </GridLayout>
 
-                <!--            <Button-->
-                <!--                android:id="@+id/button"-->
-                <!--                android:layout_width="180dp"-->
-                <!--                android:layout_height="55dp"-->
-                <!--                android:layout_gravity="center"-->
-                <!--                android:layout_marginTop="100dp"-->
-                <!--                android:backgroundTint="#7A3E26"-->
-                <!--                android:fontFamily="@font/g_bold"-->
-                <!--                android:text="Ambil Gambar"-->
-                <!--                android:textSize="14dp"-->
-                <!--                app:cornerRadius="25dp" />-->
-
-                <!--            <Button-->
-                <!--                android:id="@+id/button2"-->
-                <!--                android:layout_width="180dp"-->
-                <!--                android:layout_height="55dp"-->
-                <!--                android:layout_gravity="center"-->
-                <!--                android:backgroundTint="#ffc857"-->
-                <!--                android:fontFamily="@font/g_bold"-->
-                <!--                android:text="Import Gambar"-->
-                <!--                android:textSize="14dp"-->
-                <!--                app:cornerRadius="25dp" />-->
-
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
-        <!--    <ImageView-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_alignParentBottom="true"-->
-        <!--        android:layout_centerHorizontal="true"-->
-        <!--        android:src="@drawable/ic_arrow_down" />-->
 
     </RelativeLayout>
 

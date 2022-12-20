@@ -30,13 +30,8 @@ public class SplashActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        appname = findViewById(R.id.app_name);
-//        splashimg = findViewById(R.id.background);
-        logo = findViewById(R.id.logo);
-
-//        splashimg.animate().translationY(-2500).setDuration(1500).setStartDelay(5000);
-        appname.animate().translationY(2000).setDuration(1500).setStartDelay(5000);
-        logo.animate().translationY(1500).setDuration(1500).setStartDelay(5000);
+        splashimg = findViewById(R.id.bg);
+        splashimg.animate().translationY(-2500).setDuration(1500).setStartDelay(5000);
 
         new Handler().postDelayed(new Runnable() {
             @Override

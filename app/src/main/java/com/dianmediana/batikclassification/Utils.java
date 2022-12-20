@@ -14,7 +14,6 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 
 public class Utils {
-
     public static String writeResults(Map<String, Float> mapResults){
         Map.Entry<String, Float> entryMax = null;
         Map.Entry<String, Float> entryMax1 = null;
@@ -32,11 +31,6 @@ public class Utils {
                 entryMax1.getKey().trim() + " " + entryMax1.getValue().toString() + "\n" +
                 entryMax2.getKey().trim() + " " + entryMax2.getValue().toString() + "\n";
         return result;
-    }
-
-    public static int getImageRotation(ImageProxy image){
-        int rotation = image.getImageInfo().getRotationDegrees();
-        return rotation/90;
     }
 
     //Mengubah citra ke bentuk Bitmap
