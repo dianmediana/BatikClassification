@@ -1,3 +1,6 @@
+# GOTIQUE - Batik Classification
+
+
 # Anggota Kelompok 4
 1. I Nengah Arya Tri Putrawan   (1905551016)
 2. Putu Reza Faby Yolanda       (1905551025)
@@ -5,7 +8,6 @@
 4. Luh Kade Devi Dwiyani        (1905551097)
 5. Ni Made Tara Okta Adriana    (1905551101)
 
-# GOTIQUE - Batik Classification
 
 - [Batik Classification](#batik-classification)
   - [Deskripsi Aplikasi](#deskripsi-aplikasi)
