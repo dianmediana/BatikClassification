@@ -50,7 +50,7 @@ No | Nama Batik | Jumlah Gambar |
 
 **Contoh data gambar yang ada di dataset:**
 
-![Screenshot 2022-12-20 215844](https://user-images.githubusercontent.com/79390341/208684299-3dce0436-479b-47cc-96fe-9c2f415fbeda.png)
+![Screenshot 2022-12-20 220222](https://user-images.githubusercontent.com/79390341/208685034-086cdb66-e826-446d-9661-d5a4f676d589.png)
 
 
 ## Penjelasan Algoritma
