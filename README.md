@@ -114,7 +114,7 @@ VGG16 Merupakan hasil pengembangan dari Alexnet, di mana arsitektur ini berfokus
 #### Proses Training
 1. Data Training dan Data Testing
 
-Langkah pertama yang dilakukan adalah membagi dataset menjadi data training dan data testing untuk menguji performa model. Adapun jumlah data training adalah 815 image dan jumlah data testing adalah 124 image.
+Langkah pertama yang dilakukan adalah membagi dataset menjadi data training dan data testing untuk menguji performa model. Adapun jumlah data training adalah 785 image dan jumlah data testing adalah 139 image.
 
 2. Data Augmentation
 
@@ -167,6 +167,43 @@ Penjelasan:
 
 
 #### Proses Testing
+
+### Model VGG 16
+#### Proses Training
+1. Data Training dan Data Testing
+
+Langkah pertama yang dilakukan adalah membagi dataset menjadi data training dan data testing untuk menguji performa model. Adapun jumlah data training adalah 785 image dan jumlah data testing adalah 139 image.
+
+2. Data Augmentation
+
+Data augmentation merupakan suatu teknik untuk melakukan modifikasi pada gambar asli dengan melakukan perubahan bentuk, sehingga mendapatkan data gambar yang baru. Adapun data augmentation bertujuan untuk meningkatkan jumlah data pada dataset.
+
+![image](https://user-images.githubusercontent.com/83971650/208741863-e82d7eec-9b27-4369-a667-0aa4b0d3c52c.png)
+
+Output Data Augmentasi:
+- Training sebanyak 770 images
+- Test sebanyak 124 images
+
+Penjelasan Data Augmentasi:
+- vgg16.preprocess_input, digunakan pada preprocess gambar untuk penggunaan model VGG16
+- shear_range=0.2, artinya menggeser citra searah jarum jam dengan pergeseran sebanyak 0.2 derajat.
+- rotation_range=30, artinya memutar gambar dengan sudut 30 derajat secara acak.
+- zoom_range=0.2, artinya memperbesar citra dengan perbesaran sebanyak 1+0.2 dari luas gambar.
+- width_shift_range=0.2, artinya menggeser gambar secara horizontal (kiri atau kanan).
+- height_shift_range=0.2, artinya menggeser gambar secara vertical (atas atau bawah).
+- horizontal_flip=True, artinya membalik gambar secara horizontal.
+- vertical_flip=True artinya membalik gambar secara vertical.
+
+**Contoh data augmentation**
+
+![image](https://user-images.githubusercontent.com/83971650/208742991-d68a03e7-f165-4518-a7ab-0c1cb8a8a7c0.png)
+
+3. Implementasi Model
+
+Pengimplementasian algoritma VGG16 diawali dengan pembuatan base model yang selanjutnya digabungkan dengan beberapa layer seperti pada gambar di bawah ini.
+
+![image](https://user-images.githubusercontent.com/83971650/208743732-4e04308c-1646-4f3d-bab1-e3d286b32282.png)
+
 
 
 ## Perbandingan Model
