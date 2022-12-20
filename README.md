@@ -4,8 +4,8 @@
 # Anggota Kelompok 4
 1. I Nengah Arya Tri Putrawan   (1905551016)
 2. Putu Reza Faby Yolanda       (1905551025)
-3. Ketut Mediana Ayu Candrayani (1905551098)
-4. Luh Kade Devi Dwiyani        (1905551097)
+3. Luh Kade Devi Dwiyani        (1905551097)
+4. Ketut Mediana Ayu Candrayani (1905551098)
 5. Ni Made Tara Okta Adriana    (1905551101) 
 
 
@@ -76,11 +76,11 @@ VGG16 Merupakan hasil pengembangan dari Alexnet, di mana arsitektur ini berfokus
 ## Proses Training dan Testing
 ### Model EffiecientNet
 #### Proses Training
-1. Data Training dan Data Testing
+**1. Data Training dan Data Testing**
 
 Langkah pertama yang dilakukan adalah membagi dataset menjadi data training dan data testing untuk menguji performa model. Adapun jumlah data training adalah 785 images dan jumlah data testing adalah 139 images.
 
-2. Data Augmentation
+**2. Data Augmentation**
 
 Data augmentation merupakan suatu teknik untuk melakukan modifikasi pada gambar asli dengan melakukan perubahan bentuk, sehingga mendapatkan data gambar yang baru. Adapun data augmentation bertujuan untuk meningkatkan jumlah data pada dataset.
 
@@ -99,11 +99,11 @@ Penjelasan Data Augmentasi:
 - horizontal_flip=True, artinya membalik gambar secara horizontal.
 - vertical_flip=True artinya membalik gambar secara vertical.
 
-**Contoh data augmentation**
+Contoh data augmentation
 
 ![image](https://user-images.githubusercontent.com/80681345/208732642-e538ed73-dfaa-44ae-88cd-60710296bb92.png)
 
-3. Implementasi Model
+**3. Implementasi Model**
 
 Pengimplementasian algoritma EfficientNet diawali dengan pembuatan base model yang selanjutnya digabungkan dengan beberapa layer seperti pada gambar di bawah ini.
 
@@ -116,7 +116,7 @@ Penjelasan:
 - Dropout(0.2), artinya menerapkan dropout ke input yang akan menonaktifkan 20% hidden units secara acak.
 - Dense(15, activation='softmax'), artinya menggunakan dense layer dengan softmax activation function untuk prediksi akhir sebanyak 15 kelas.
 
-4. Evaluasi Model
+**4. Evaluasi Model**
 
 Setelah model dibuat, langkah selanjutnya adalah melakukan evaluasi pada kinerja model seperti gambar berikut.
 
