@@ -92,13 +92,11 @@ No | Nama Batik | Jumlah Gambar |
 
 
 ## Penjelasan Algoritma
+### Algoritma EffiecienNet
+####    EfficientNet merupakan salah satu arsitektur pada Convolutional Neural Network (CNN) yang dikembangkan oleh tim Google Brain. EfficientNet menggunakan model scaling, yaitu melakukan penskalaan pada model [1] dengan menggabungkan skala width (penambahan jumlah feature map pada layer), depth (penambahan jumlah layer CNN), dan resolusi (meningkatkan resolusi input image) yang disebut sebagai compound scaling yang bertujuan untuk memperbaiki performa model [2]. Penskalaan ini menyebabkan EfficientNet tidak memerlukan kebutuhan komputasi sebanyak yang dibutuhkan CNN konvensional, sehingga dapat menghasilkan nilai akurasi yang lebih baik [3]. Pada project ini, kami menggunakan EfficientNet-B0 yang merupakan baseline model dari arsitektur EfficientNet. Selain itu, menurut [4] arsitektur EfficientNet-B0 dipilih karena memiliki jumlah parameter yang paling sedikit, sehingga memiliki waktu training yang lebih cepat dibandingkan dengan arsitektur EfficientNet yang lain. Berikut merupakan arsitektur dari EfficientNet.
 
-### Algoritma EffiecienNet-B0
-####    EfficientNet merupakan salah satu arsitektur pada Convolutional Neural Network (CNN) yang dikembangkan oleh tim Google Brain. EfficientNet menggunakan model scaling, yaitu melakukan penskalaan pada model [1] dengan menggabungkan skala lebar (penambahan jumlah feature map pada layer), kedalaman (penambahan jumlah layer CNN), dan resolusi (meningkatkan resolusi input image) yang disebut sebagai compound scaling yang bertujuan untuk memperbaiki performa model [2]. Penskalaan ini menyebabkan EfficientNet tidak memerlukan kebutuhan komputasi sebanyak yang dibutuhkan CNN konvensional, sehingga dapat menghasilkan nilai akurasi yang lebih baik [3]. Pada penelitian ini, kami menggunakan EfficientNet-B0 yang merupakan baseline model dari arsitektur EfficientNet. Selain itu, menurut [4] arsitektur EfficientNet-B0 dipilih karena memiliki jumlah parameter yang paling sedikit, sehingga memiliki waktu training yang lebih cepat dibandingkan dengan arsitektur EfficientNet yang lain. Berikut merupakan gambaran dari EfficientNet.
-
-![image](https://user-images.githubusercontent.com/80681345/208693996-b46fcd99-b9c0-49cb-92ef-9ed0e744c5dd.png)
-
-
+![image](https://user-images.githubusercontent.com/80681345/208716364-30d8bde6-c4e0-4c2d-b4a2-e8ad13709e3c.png)
+Gambar di atas menunjukkan bahwa arsitektur EfficientNet-B0 terdiri dari beberapa layer. Layer pertama adalah Convolutional Layer dengan input size sebesar 224 x 224. Lalu, dilanjutkan dengan Mobile Bottlenect Convolutional Layer yang terdiri dari 7 blok. 
 
 ### Algoritma VGG16
 #####     VGG16 Merupakan hasil pengembangan dari Alexnet, dimana arsitektur ini berfokus pada memperbanyak proses fitur ekstraksi pada layer convolution sehingga mampu mendapatkan representasi citra yang banyak untuk dapat di klasifikasikan. VGG16 memiliki total layer 16 yaitu 13 layer convolution dan 3 layer fully connected. VGG16 menggunakan konsep blok untuk membentuk convolution layer yang masing-masing convolution layer nya memiliki ukuran 3 x 3 dan stride 1. Pada akhir blok, digunakan max pooling layer dengan ukuran 2 x 2 dan stride 2.
