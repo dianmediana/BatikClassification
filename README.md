@@ -114,7 +114,7 @@ VGG16 Merupakan hasil pengembangan dari Alexnet, di mana arsitektur ini berfokus
 #### Proses Training
 1. Data Training dan Data Testing
 
-Langkah pertama yang dilakukan adalah membagi dataset menjadi data training dan data testing untuk menguji performa model. Adapun jumlah data training adalah 785 image dan jumlah data testing adalah 139 image.
+Langkah pertama yang dilakukan adalah membagi dataset menjadi data training dan data testing untuk menguji performa model. Adapun jumlah data training adalah 785 images dan jumlah data testing adalah 139 images.
 
 2. Data Augmentation
 
@@ -143,7 +143,7 @@ Penjelasan Data Augmentasi:
 
 Pengimplementasian algoritma EfficientNet diawali dengan pembuatan base model yang selanjutnya digabungkan dengan beberapa layer seperti pada gambar di bawah ini.
 
-![image](https://user-images.githubusercontent.com/80681345/208734359-bafd6a1a-60c6-41a8-a460-73d45f17d77f.png)
+![image](https://user-images.githubusercontent.com/80681345/208745112-f111fccc-cf33-4e87-bf1b-1360a2850f4d.png)
 
 Penjelasan:
 - input_shape=(224, 224, 3), artinya mengatur size input gambar sebesar 224x224.
@@ -165,8 +165,17 @@ Penjelasan:
 - shuffle=True, artinya masing masing batch pada generator diacak sehingga data tidak akan urut.
 - epochs=50, artinya mengatur banyaknya iterasi yang digunakan oleh model sebanyak 50.
 
-
 #### Proses Testing
+
+![image](https://user-images.githubusercontent.com/80681345/208745606-6df5c75d-bb4a-4f8e-8ecc-4c7f432c4463.png)
+
+![image](https://user-images.githubusercontent.com/80681345/208745702-9f9f59a8-d9c3-4d11-9c2d-aee81403286c.png)
+
+Dari proses training model yang telah dibuat, adapun hasil yang didapatkan adalah sebagai berikut.
+- loss        : 0.6583
+- accuracy    : 0.8026
+- val_loss    : 0.7288
+- val_accuray : 0.7903
 
 ### Model VGG 16
 #### Proses Training
