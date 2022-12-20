@@ -202,6 +202,15 @@ epochs=50, artinya mengatur banyaknya iterasi yang digunakan oleh model sebanyak
 
 ## Perbandingan Model
 
+Adapun perbandingan antara model EfficientNet dan model VGG16 adalah sebagai berikut.
+
+Metrics | EfficientNet | VGG16 | 
+| - | ---------- | -- |
+| loss | 0.6583 |  |
+| accuracy | 0.8026 |  |
+| val_loss | 0.7288 |  |
+| val_accuracy | 0.7903 |  |
+
 
 ## Link Project Google Colab
 #### Model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
