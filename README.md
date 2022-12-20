@@ -136,7 +136,34 @@ Penjelasan Data Augmentasi:
 - vertical_flip=True artinya membalik gambar secara vertical.
 
 **Contoh data gambar yang ada pada dataset**
+
 ![image](https://user-images.githubusercontent.com/80681345/208732642-e538ed73-dfaa-44ae-88cd-60710296bb92.png)
+
+3. Implementasi Model
+
+Pengimplementasian algoritma EfficientNet diawali dengan pembuatan base model yang selanjutnya digabungkan dengan beberapa layer seperti pada gambar di bawah ini.
+
+![image](https://user-images.githubusercontent.com/80681345/208734359-bafd6a1a-60c6-41a8-a460-73d45f17d77f.png)
+
+Penjelasan:
+- input_shape=(224, 224, 3), artinya mengatur size input gambar sebesar 224x224.
+- pooling='avg', artinya menggunakan global averange pooling sebagai output blok convolutional terakhir.
+- Dense(64, activation='relu'), artinya menggunakan dense layer sebanyak 64 units dengan akstivasi relu.
+- Dropout(0.2), artinya menerapkan dropout ke input yang akan menonaktifkan 20% hidden units secara acak.
+- Dense(15, activation='softmax'), artinya menggunakan dense layer dengan softmax activation function untuk prediksi akhir sebanyak 15 kelas.
+
+4. Evaluasi Model
+
+Setelah model dibuat, langkah selanjutnya adalah melakukan evaluasi pada kinerja model seperti gambar berikut.
+
+![image](https://user-images.githubusercontent.com/80681345/208734548-5d95563d-00a4-48e2-b2f9-1be8076c64b2.png)
+
+Penjelasan:
+- optimizer=Adam(learning_rate=1e-4), artinya menggunakan optimizer adam dengan learning rate 0.0001.
+- loss='categorical_crossentropy', artinya menggunakan categorical crossentropy loss function karena memiliki unit lebih dari 2
+- metrics=['accuracy'], artinya menggunakan metrik accuracy untuk melihat ketepatan model dalam melakukan klasifikasi.
+- shuffle=True, artinya masing masing batch pada generator diacak sehingga data tidak akan urut.
+- epochs=50, artinya mengatur banyaknya iterasi yang digunakan oleh model sebanyak 50.
 
 
 
