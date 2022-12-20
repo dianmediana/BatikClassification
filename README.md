@@ -6,7 +6,7 @@
 2. Putu Reza Faby Yolanda       (1905551025)
 3. Ketut Mediana Ayu Candrayani (1905551098)
 4. Luh Kade Devi Dwiyani        (1905551097)
-5. Ni Made Tara Okta Adriana    (1905551101) (@taraadriana)
+5. Ni Made Tara Okta Adriana    (1905551101) 
 
 
 
