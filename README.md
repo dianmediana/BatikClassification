@@ -1,4 +1,4 @@
-# batik_classification
+
 Model deep learning ini dirancang untuk melakukan klasifikasi terhadap gambar batik. Batik diklasifikasikan berdasarkan jenisnya. 
 
 Jenis Batik : Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, dll 
@@ -18,6 +18,7 @@ Percobaan model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHw
   - [Model Deep Learning](#model-deep-learning)
   - [Proses Training dan Testing](#proses-training-dan-testing)
   - [Analisis Model dan Hasil Evaluasi](#analisis-model-dan-hasil-evaluasi)
+  - [Link Project Google Colab](#link-project-google-colab)
   
 
 ## Deskripsi Aplikasi
@@ -111,3 +112,8 @@ No | Nama Batik | Jumlah Gambar |
 2) Arahkan kamera ke objek batik, maka akan muncul teks hasil klasifikasi batik dan nilai confidence pada bagian bawah kamera.
 
 ![image](https://user-images.githubusercontent.com/82147780/208564228-04466f27-f546-48f8-bb94-d22a52c0cc05.png)
+
+## Link Project Google Colab
+#### Model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
+
+#### Model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHwE9NQFviZSuUoKtL4r?usp=sharing
