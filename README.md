@@ -26,43 +26,7 @@
 GOTIQUE merupakan sebuah aplikasi berbasis android yang dapat membantu user untuk mengetahui jenis batik secara langsung melalui kamera handphone. Jenis batik yang dapat diklasifikasikan adalah Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Aplikasi ini memungkinkan user untuk dapat mengetahui jenis batik dengan berbagai cara, seperti memfoto batik melalui kamera, mengupload foto batik dari galeri, maupun mengarahkan kamera handphone ke batik untuk mengetahui jenis batik secara real-time.
 
 ## Cara Menjalankan Aplikasi
-#### Klasifikasi gambar dengan kamera
-1) Klik tombol kamera pada halaman utama aplikasi, maka akan muncul tampilan kamera.
-
-![image](https://user-images.githubusercontent.com/82147780/208564417-00e9cf52-c87a-4b51-8679-f97e0b43367a.png)
-
-2) Ambil gambar batik, kemudian klik OK.
-
-![image](https://user-images.githubusercontent.com/82147780/208564392-d59cd093-0abb-4109-b2e9-c267e1114854.png)
-![image](https://user-images.githubusercontent.com/82147780/208564380-93fe4635-d6f7-4fe2-b061-60ebcac25d41.png)
-
-3) Gambar batik, hasil klasifikasi, dan nilai confidence kemudian akan ditampilkan pada halaman utama aplikasi.
-
-![image](https://user-images.githubusercontent.com/82147780/208564337-4033383a-367e-40eb-afe8-2d7dabd46946.png)
-
-
-#### Klasifikasi gambar melalui galeri
-1) Klik tombol galeri pada halaman utama aplikasi, maka akan muncul galeri.
-
-![image](https://user-images.githubusercontent.com/82147780/208564313-7cd98672-b61c-4518-990d-ee9e5735f715.png)
-
-2) Pada galeri, pilih salah satu gambar batik yang ingin diklasifikasi
-
-![image](https://user-images.githubusercontent.com/82147780/208564299-89fbe2e7-2487-4819-86e9-8bef715c8657.png)
-
-3) Gambar batik, hasil klasifikasi, dan nilai confidence kemudian akan ditampilkan pada halaman utama aplikasi.
-
-![image](https://user-images.githubusercontent.com/82147780/208564280-922ff79d-579f-4243-a9ca-da8fe29175b3.png)
-
-
-#### Klasifikasi gambar secara real-time
-1) Klik tombol live pada halaman utama aplikasi, maka akan muncul tampilan kamera.
-
-![image](https://user-images.githubusercontent.com/82147780/208564270-6f4df162-c2a1-4051-aa7f-c2f26bfb0ce7.png)
-
-2) Arahkan kamera ke objek batik, maka akan muncul teks hasil klasifikasi batik dan nilai confidence pada bagian bawah kamera.
-
-![image](https://user-images.githubusercontent.com/82147780/208564228-04466f27-f546-48f8-bb94-d22a52c0cc05.png)
+![tutor gotique](https://user-images.githubusercontent.com/82147780/208751397-b2604aa0-6b76-48df-b1ea-194a2c29d9c5.png)
 
 
 ## Arsitektur Aplikasi
