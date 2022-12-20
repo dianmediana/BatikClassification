@@ -84,7 +84,7 @@ Langkah pertama yang dilakukan adalah membagi dataset menjadi data training dan 
 
 Data augmentation merupakan suatu teknik untuk melakukan modifikasi pada gambar asli dengan melakukan perubahan bentuk, sehingga mendapatkan data gambar yang baru. Adapun data augmentation bertujuan untuk meningkatkan jumlah data pada dataset.
 
-![image](https://user-images.githubusercontent.com/80681345/208722608-a425cc3f-b42d-426c-bc58-32b5c07ff8a7.png)
+![image](https://user-images.githubusercontent.com/80681345/208754042-04f0b885-3b50-4ead-a65b-0397c1b3c9fc.png)
 
 Output Data Augmentasi:
 - Training sebanyak 770 images
