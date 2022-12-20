@@ -90,7 +90,7 @@ No | Nama Batik | Jumlah Gambar |
 | | **TOTAL**  | 894 |
 
 
-**Contoh data gambar yang ada pada dataset:**
+**Contoh data gambar yang ada pada dataset**
 
 ![Screenshot 2022-12-20 220222](https://user-images.githubusercontent.com/79390341/208685034-086cdb66-e826-446d-9661-d5a4f676d589.png)
 
@@ -113,9 +113,11 @@ VGG16 Merupakan hasil pengembangan dari Alexnet, di mana arsitektur ini berfokus
 ### Model EffiecientNet
 #### Proses Training
 1. Data Training dan Data Testing
+
 Langkah pertama yang dilakukan adalah membagi dataset menjadi data training dan data testing untuk menguji performa model. Adapun jumlah data training adalah 815 image dan jumlah data testing adalah 124 image.
 
 2. Data Augmentation
+
 Data augmentation merupakan suatu teknik untuk melakukan modifikasi pada gambar asli dengan melakukan perubahan bentuk, sehingga mendapatkan data gambar yang baru. Adapun data augmentation bertujuan untuk meningkatkan jumlah data pada dataset.
 
 ![image](https://user-images.githubusercontent.com/80681345/208722608-a425cc3f-b42d-426c-bc58-32b5c07ff8a7.png)
