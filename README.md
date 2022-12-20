@@ -213,7 +213,28 @@ Pengimplementasian algoritma VGG16 diawali dengan pembuatan base model yang sela
 
 ![image](https://user-images.githubusercontent.com/83971650/208743732-4e04308c-1646-4f3d-bab1-e3d286b32282.png)
 
+Penjelasan :
 
+input shape = (224, 224, 3) artinya mengatur ukuran input sebesar 224x224
+model sequential = digunakan untuk memproses input berurutan
+model.add(base_model) = menambahkan arsitektur model VGG16
+base_model.trainable = melakukan freeze layer untuk menghindari pre-trained weight terupdate
+GlobalAveragePooling2D = menambahkan global average pooling layer
+Dense(units=64, activation='relu') = menggunakna dense layer sebanyak 64 units dengan aktivasi relu
+Dropout(0.2), menerapkan dropout ke input yang akan menonaktifkan 20% hidden units secara acak
+Dense(units=15, activation='softmax'), artinya menggunaknan dense layer denagn softmax activation function untuk prediksi akhir sebanyak 15 kelas.
+
+4. Evaluasi Model
+
+Setelah model dibuat, langkah selanjutnya adalah melakukan evaluasi pada kinerja model seperti gambar berikut.
+
+![image](https://user-images.githubusercontent.com/83971650/208749698-9e660355-2576-484b-8b07-f2ec9b261f03.png)
+
+Penjelasan :
+optimizer=Adam(learning_rate=0.0001), artinya menggunakan optimizer adam dengan learning rate 0.0001.
+loss='categorical_crossentropy', artinya menggunakan categorical crossentropy loss function karena memiliki unit lebih dari 2
+metrics=['accuracy'], artinya menggunakan metrik accuracy untuk melihat ketepatan model dalam melakukan klasifikasi.
+epochs=50, artinya mengatur banyaknya iterasi yang digunakan oleh model sebanyak 50.
 
 ## Perbandingan Model
 
