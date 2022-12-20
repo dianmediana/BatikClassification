@@ -32,7 +32,7 @@ GOTIQUE merupakan sebuah aplikasi berbasis android yang dapat membantu user untu
 ## Arsitektur Aplikasi
 
 ## Dataset
-Dataset yang digunakan adalah dataset gambar batik yang dikumpulkan secara manual dari google image yang terdiri 15 jenis batik, yaitu Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Adapun total keseluruhan dataset batik yang dimiliki adalah 894 gambar. Berikut merupakan rincian jumlah masing-masing jenis batik yang digunakan.
+Dataset yang digunakan adalah dataset gambar batik yang dikumpulkan secara manual dari google image yang terdiri dari 15 jenis batik, yaitu Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Adapun total keseluruhan dataset batik yang dimiliki adalah 894 images. Berikut merupakan rincian jumlah masing-masing jenis batik yang digunakan.
 
 No | Nama Batik | Jumlah Gambar | 
 | - | ---------- | -- |
