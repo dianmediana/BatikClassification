@@ -17,7 +17,7 @@ Percobaan model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHw
   - [Algoritma CNN](#algoritma-cnn)
   - [Proses Training dan Testing](#proses-training-dan-testing)
   - [Analisis Model dan Hasil Evaluasi](#analisis-model-dan-hasil-evaluasi)
-  - [How to Run Application](#how-to-run-application)
+  - [Cara Menjalankan Aplikasi](#cara-menjalankan-aplikasi)
 
 
 ## Deskripsi Aplikasi
