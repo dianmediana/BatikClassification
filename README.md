@@ -1,13 +1,3 @@
-
-Model deep learning ini dirancang untuk melakukan klasifikasi terhadap gambar batik. Batik diklasifikasikan berdasarkan jenisnya. 
-
-Jenis Batik : Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, dll 
-
-Percobaan model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
-
-Percobaan model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHwE9NQFviZSuUoKtL4r?usp=sharing
-
-
 # GOTIQUE - Batik Classification
 
 - [Batik Classification](#batik-classification)
@@ -22,7 +12,7 @@ Percobaan model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHw
   
 
 ## Deskripsi Aplikasi
-Aplikasi Gotique merupakan aplikasi android yang dapat menentukan jenis batik secara langsung melalui kamera handphone. Jenis batik yang dapat diklasifikasi adalah Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, Batik Tambal. 
+GOTIQUE merupakan sebuah aplikasi android yang dapat membantu user untuk mengetahui jenis batik secara langsung melalui kamera handphone. Jenis batik yang dapat diklasifikasikan adalah Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Aplikasi ini memungkinkan user untuk dapat mengetahui jenis batik dengan berbagai cara, seperti memfoto batik melalui kamera, mengupload foto batik dari handphone, maupun mengarahkan kamera handphone ke batik untuk mengetahui jenis batik secara real-time.
 
 ## Arsitektur Aplikasi
 
