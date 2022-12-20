@@ -123,19 +123,19 @@ Data augmentation merupakan suatu teknik untuk melakukan modifikasi pada gambar 
 ![image](https://user-images.githubusercontent.com/80681345/208722608-a425cc3f-b42d-426c-bc58-32b5c07ff8a7.png)
 
 Output Data Augmentasi:
-- Training sebanyak 770 images.
-- Test sebanyak 124 images.
+- Training sebanyak 770 images
+- Test sebanyak 124 images
 
 Penjelasan Data Augmentasi:
 - shear_range=0.2, artinya menggeser citra searah jarum jam dengan pergeseran sebanyak 0.2 derajat.
-- rotation_range=30, artinya memutar gambar dengan sudut 30 derajat secara acak
-- zoom_range=0.2, artinya memperbesar citra dengan perbesaran sebanyak 1+0.2 dari luas gambar
-- width_shift_range=0.2, artinya menggeser gambar secara horizontal (kiri atau kanan) 
-- height_shift_range=0.2, artinya menggeser gambar secara vertical (atas atau bawah)
-- horizontal_flip=True, artinya membalik gambar secara horizontal
-- vertical_flip=True artinya membalik gambar secara vertical
+- rotation_range=30, artinya memutar gambar dengan sudut 30 derajat secara acak.
+- zoom_range=0.2, artinya memperbesar citra dengan perbesaran sebanyak 1+0.2 dari luas gambar.
+- width_shift_range=0.2, artinya menggeser gambar secara horizontal (kiri atau kanan).
+- height_shift_range=0.2, artinya menggeser gambar secara vertical (atas atau bawah).
+- horizontal_flip=True, artinya membalik gambar secara horizontal.
+- vertical_flip=True artinya membalik gambar secara vertical.
 
-Contoh Data Augmentation
+**Contoh data gambar yang ada pada dataset**
 ![image](https://user-images.githubusercontent.com/80681345/208732642-e538ed73-dfaa-44ae-88cd-60710296bb92.png)
 
 
