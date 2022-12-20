@@ -23,7 +23,7 @@
   
 
 ## Deskripsi Aplikasi
-GOTIQUE merupakan sebuah aplikasi android yang dapat membantu user untuk mengetahui jenis batik secara langsung melalui kamera handphone. Jenis batik yang dapat diklasifikasikan adalah Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Aplikasi ini memungkinkan user untuk dapat mengetahui jenis batik dengan berbagai cara, seperti memfoto batik melalui kamera, mengupload foto batik dari handphone, maupun mengarahkan kamera handphone ke batik untuk mengetahui jenis batik secara real-time.
+GOTIQUE merupakan sebuah aplikasi berbasis android yang dapat membantu user untuk mengetahui jenis batik secara langsung melalui kamera handphone. Jenis batik yang dapat diklasifikasikan adalah Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Aplikasi ini memungkinkan user untuk dapat mengetahui jenis batik dengan berbagai cara, seperti memfoto batik melalui kamera, mengupload foto batik dari galeri, maupun mengarahkan kamera handphone ke batik untuk mengetahui jenis batik secara real-time.
 
 ## Cara Menjalankan Aplikasi
 #### Klasifikasi gambar dengan kamera
@@ -68,7 +68,7 @@ GOTIQUE merupakan sebuah aplikasi android yang dapat membantu user untuk mengeta
 ## Arsitektur Aplikasi
 
 ## Dataset
-Dataset yang digunakan adalah dataset gambar batik yang dikumpulkan secara manual dari google image yang terdiri 15 jenis batik. Berikut merupakan jenis-jenis batik yang digunakan pada aplikasi ini.
+Dataset yang digunakan adalah dataset gambar batik yang dikumpulkan secara manual dari google image yang terdiri 15 jenis batik, yaitu Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Adapun total keseluruhan dataset batik yang dimiliki adalah 894 gambar. Berikut merupakan rincian jumlah masing-masing jenis batik yang digunakan.
 
 No | Nama Batik | Jumlah Gambar | 
 | - | ---------- | -- |
@@ -135,7 +135,7 @@ Penjelasan Data Augmentasi:
 - horizontal_flip=True, artinya membalik gambar secara horizontal.
 - vertical_flip=True artinya membalik gambar secara vertical.
 
-**Contoh data gambar yang ada pada dataset**
+**Contoh data augmentation**
 
 ![image](https://user-images.githubusercontent.com/80681345/208732642-e538ed73-dfaa-44ae-88cd-60710296bb92.png)
 
@@ -166,12 +166,10 @@ Penjelasan:
 - epochs=50, artinya mengatur banyaknya iterasi yang digunakan oleh model sebanyak 50.
 
 
-
-
 #### Proses Testing
 
 
-## Analisis Model dan Hasil Evaluasi
+## Perbandingan Model
 
 
 ## Link Project Google Colab
