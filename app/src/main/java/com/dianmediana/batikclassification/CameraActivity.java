@@ -26,6 +26,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.dianmediana.batikclassification.ml.ModelDatasetbaruBaru;
+import com.dianmediana.batikclassification.ml.ModelEffnetFix;
 import com.dianmediana.batikclassification.ml.ModelEfnetTerbaru;
 import com.google.common.util.concurrent.ListenableFuture;
 
@@ -46,7 +47,7 @@ public class CameraActivity extends AppCompatActivity {
     PreviewView mPreviewView;
     TextView tvResults;
     int imageSize = 224;
-    ModelEfnetTerbaru model;
+    ModelDatasetbaruBaru model;
 
 
     @Override
@@ -59,7 +60,7 @@ public class CameraActivity extends AppCompatActivity {
         tvResults = findViewById(R.id.tvResults);
 
         try {
-            model = ModelEfnetTerbaru.newInstance(getApplicationContext());
+            model = ModelDatasetbaruBaru.newInstance(getApplicationContext());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -127,7 +128,7 @@ public class CameraActivity extends AppCompatActivity {
     }
 
     //Memanggil model untuk melakukan klasifikasi image
-    private String classifyImage(Image image, ModelEfnetTerbaru model ) throws IOException {
+    private String classifyImage(Image image, ModelDatasetbaruBaru model ) throws IOException {
         Bitmap img = Utils.toBitmap(image);
         img = Bitmap.createScaledBitmap(img, 224, 224, false);
 
@@ -152,7 +153,7 @@ public class CameraActivity extends AppCompatActivity {
 
             inputFeature0.loadBuffer(byteBuffer);
             //Menjalankan model unruk klasifikasi.
-            ModelEfnetTerbaru.Outputs outputs = model.process(inputFeature0);
+            ModelDatasetbaruBaru.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
             float[] confidences = outputFeature0.getFloatArray();
             //Mencari indeks kelas dengan tingkat confidence paling tinggi
