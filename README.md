@@ -122,7 +122,10 @@ VGG16 Merupakan hasil pengembangan dari Alexnet, di mana arsitektur ini berfokus
 
 ## Daftar Pustaka
 [1]	N. Azahro Choirunisa, T. Karlita, and R. Asmara, “Deteksi Ras Kucing Menggunakan Compound Model Scaling Convolutional Neural Network,” Technomedia J., vol. 6, no. 2, pp. 236–251, 2021, doi: 10.33050/tmj.v6i2.1704.
+
 [2]	G. Kim and C. Lee, “Convolutional Neural Network Using Convolutional Neural Network,” Springer, vol. 2644, no. 2, pp. 747–749, 2016, [Online]. Available: https://link.springer.com/chapter/10.1007/978-1-4842-2845-6_6
+
 [3]	I. N. Alam, “METODE TRANSFER LEARNING PADA DEEP CONVOLUTIONAL NEURAL NETWORK ( DCNN ) UNTUK PENGENALAN EKSPRESI WAJAH METODE TRANSFER LEARNING PADA DEEP CONVOLUTIONAL NEURAL NETWORK ( DCNN ),” no. October, 2022.
+
 [4]	S. A. Sabrina and W. F. Al Maki, “Klasifikasi Penyakit Pada Tanaman Kopi Robusta Berdasarkan Citra Daun Menggunakan Convolutional Neural Network,” eProceedings …, vol. 9, no. 3, pp. 1919–1927, 2022, [Online]. Available: https://openlibrarypublications.telkomuniversity.ac.id/index.php/engineering/article/view/17997%0Ahttps://openlibrarypublications.telkomuniversity.ac.id/index.php/engineering/article/download/17997/17626
 
