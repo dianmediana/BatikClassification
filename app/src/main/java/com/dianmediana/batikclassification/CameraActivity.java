@@ -59,7 +59,6 @@ public class CameraActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Log.d("clasify", "hah");
 
         if (allPermissionsGranted()){
             startCamera();
