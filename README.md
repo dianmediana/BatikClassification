@@ -63,10 +63,10 @@ No | Nama Batik | Jumlah Gambar |
 
 
 ### Algoritma VGG16
+##### VGG16 Merupakan hasil pengembangan dari Alexnet, dimana arsitektur ini berfokus pada memperbanyak proses fitur ekstraksi pada layer convolution sehingga mampu mendapatkan representasi citra yang banyak untuk dapat di klasifikasikan. VGG16 memiliki total layer 16 yaitu 13 layer convolution dan 3 layer fully connected. VGG16 menggunakan konsep blok untuk membentuk convolution layer yang masing-masing convolution layer nya memiliki ukuran 3 x 3 dan stride 1. Pada akhir blok, digunakan max pooling layer dengan ukuran 2 x 2 dan stride 2.
 
-#### Definisi Algoritma VGG16
+![image](https://user-images.githubusercontent.com/83971650/208709474-ac6d88d0-d590-4ec5-8f5c-5e8651c921b7.png)
 
-##### VGG16 memiliki total layer 16 yaitu 13 layer convolution dan 3 layer fully connected. VGG16 menggunakan konsep blok untuk membentuk convolution layer yang masing-masing convolution layer nya memiliki ukuran 3 x 3 dan stride 1. Pada akhir blok, digunakan max pooling layer dengan ukuran 2 x 2 dan stride 2.
 
 
 ## Proses Training dan Testing
