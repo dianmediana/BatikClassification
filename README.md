@@ -70,7 +70,7 @@ EfficientNet merupakan salah satu arsitektur pada Convolutional Neural Network (
 
 ![image](https://user-images.githubusercontent.com/80681345/208716364-30d8bde6-c4e0-4c2d-b4a2-e8ad13709e3c.png)
 
-Gambar di atas menunjukkan bahwa arsitektur EfficientNet-B0 terdiri dari beberapa layer. Layer pertama adalah Convolutional Layer dengan input size sebesar 224 x 224. Lalu, dilanjutkan dengan Mobile Bottlenect Convolutional Layer yang terdiri dari 7 blok. 
+Gambar di atas menunjukkan bahwa arsitektur EfficientNet-B0 terdiri dari beberapa layer. Layer pertama adalah Convolutional Layer dengan input size sebesar 224 x 224. Lalu, dilanjutkan dengan layer yang terdiri dari 7 blok. 
 
 ### Algoritma VGG16
 VGG16 Merupakan hasil pengembangan dari Alexnet, di mana arsitektur ini berfokus pada memperbanyak proses fitur ekstraksi pada layer convolution, sehingga mampu mendapatkan representasi citra yang banyak untuk dapat diklasifikasikan. VGG16 memiliki total layer 16, yaitu 13 layer convolution dan 3 layer fully connected. VGG16 menggunakan konsep blok untuk membentuk convolution layer yang masing-masing convolution layernya memiliki ukuran 3 x 3 dan stride 1. Pada akhir blok, digunakan max pooling layer dengan ukuran 2 x 2 dan stride 2. Berikut merupakan arsitektur dari VGG16.
