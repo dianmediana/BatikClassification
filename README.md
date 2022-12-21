@@ -26,7 +26,8 @@
 GOTIQUE merupakan sebuah aplikasi berbasis android yang dapat membantu user untuk mengetahui jenis batik secara langsung melalui kamera handphone. Jenis batik yang dapat diklasifikasikan adalah Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Aplikasi ini memungkinkan user untuk dapat mengetahui jenis batik dengan berbagai cara, seperti memfoto batik melalui kamera, mengupload foto batik dari galeri, maupun mengarahkan kamera handphone ke batik untuk mengetahui jenis batik secara real-time.
 
 ## Cara Menjalankan Aplikasi
-![tutor gotique](https://user-images.githubusercontent.com/82147780/208751397-b2604aa0-6b76-48df-b1ea-194a2c29d9c5.png)
+
+![tutor gotique fix](https://user-images.githubusercontent.com/82147780/208819893-1fab888d-a85c-44fd-a74d-40dd4c0b5b65.png)
 
 
 ## Arsitektur Aplikasi
