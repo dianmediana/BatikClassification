@@ -64,7 +64,7 @@ No | Nama Batik | Jumlah Gambar |
 
 
 ## Model Deep Learning
-### Algoritma EffiecientNet
+### Algoritma EfficientNet
 EfficientNet merupakan salah satu arsitektur pada Convolutional Neural Network (CNN) yang dikembangkan oleh tim Google Brain. EfficientNet menggunakan model scaling, yaitu melakukan penskalaan pada model [1] dengan menggabungkan skala width (penambahan jumlah feature map pada layer), depth (penambahan jumlah layer CNN), dan resolusi (meningkatkan resolusi input image) yang disebut sebagai compound scaling yang bertujuan untuk memperbaiki performa model [2]. Penskalaan ini menyebabkan EfficientNet tidak memerlukan kebutuhan komputasi sebanyak yang dibutuhkan CNN konvensional, sehingga dapat menghasilkan nilai akurasi yang lebih baik [3]. Pada project ini, kami menggunakan EfficientNet-B0 yang merupakan baseline model dari arsitektur EfficientNet. Selain itu, menurut [4] arsitektur EfficientNet-B0 dipilih karena memiliki jumlah parameter yang paling sedikit, sehingga memiliki waktu training yang lebih cepat dibandingkan dengan arsitektur EfficientNet yang lain. Berikut merupakan arsitektur dari EfficientNet.
 
 ![image](https://user-images.githubusercontent.com/80681345/208716364-30d8bde6-c4e0-4c2d-b4a2-e8ad13709e3c.png)
