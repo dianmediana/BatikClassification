@@ -206,16 +206,29 @@ Penjelasan :
 - metrics=['accuracy'], artinya menggunakan metrik accuracy untuk melihat ketepatan model dalam melakukan klasifikasi.
 - epochs=50, artinya mengatur banyaknya iterasi yang digunakan oleh model sebanyak 50.
 
+
+#### Proses Testing
+
+![image](https://user-images.githubusercontent.com/83971650/208812737-282ba8ff-8e94-466b-87cf-8ddd48fdc46e.png)
+
+![image](https://user-images.githubusercontent.com/83971650/208812773-bfda2f8b-cbc3-4e7c-90f4-7b7734451b0c.png)
+
+Dari proses training model yang telah dibuat, adapun hasil yang didapatkan adalah sebagai berikut.
+- loss        : 0.6175
+- accuracy    : 0.7948
+- val_loss    : 0.9497
+- val_accuray : 0.7661
+
 ## Analisis Model
 
 Adapun perbandingan antara model EfficientNet dan model VGG16 adalah sebagai berikut.
 
 Metrics | EfficientNet | VGG16 | 
 | - | ---------- | -- |
-| loss | 0.6583 |  |
-| accuracy | 0.8026 |  |
-| val_loss | 0.7288 |  |
-| val_accuracy | 0.7903 |  |
+| loss | 0.6583 | 0.6175 |
+| accuracy | 0.8026 | 0.7948 |
+| val_loss | 0.7288 | 0.9497 |
+| val_accuracy | 0.7903 | 0.7661 |
 
 
 ## Link Project Google Colab
