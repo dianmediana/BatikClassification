@@ -2,11 +2,11 @@
 
 
 # Anggota Kelompok 4
-1. I Nengah Arya Tri Putrawan   (1905551016)
-2. Putu Reza Faby Yolanda       (1905551025)
-3. Luh Kade Devi Dwiyani        (1905551097)
-4. Ketut Mediana Ayu Candrayani (1905551098)
-5. Ni Made Tara Okta Adriana    (1905551101) 
+1. I Nengah Arya Tri Putrawan   (1905551016)-([@wanput24](https://github.com/wanput24))
+2. Putu Reza Faby Yolanda       (1905551025)-([@rezafaby](https://github.com/rezafaby))
+3. Luh Kade Devi Dwiyani        (1905551097)-([@devidwiyani](https://github.com/devidwiyani))
+4. Ketut Mediana Ayu Candrayani (1905551098)-([@dianmediana](https://github.com/dianmediana))
+5. Ni Made Tara Okta Adriana    (1905551101)-([@taraadriana](https://github.com/taraadriana)) 
 
 
 
