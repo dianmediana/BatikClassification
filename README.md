@@ -204,7 +204,7 @@ Penjelasan :
 - metrics=['accuracy'], artinya menggunakan metrik accuracy untuk melihat ketepatan model dalam melakukan klasifikasi.
 - epochs=50, artinya mengatur banyaknya iterasi yang digunakan oleh model sebanyak 50.
 
-## Perbandingan Model
+## Analisis Model
 
 Adapun perbandingan antara model EfficientNet dan model VGG16 adalah sebagai berikut.
 
