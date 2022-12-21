@@ -219,7 +219,7 @@ Metrics | EfficientNet | VGG16 |
 ## Link Project Google Colab
 #### Model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
 
-#### Model VGG-16: https://colab.research.google.com/drive/1tkgMsX13exbPDHwE9NQFviZSuUoKtL4r?usp=sharing
+#### Model VGG-16: https://colab.research.google.com/drive/1rxApe09C5oPv0JE-udFJFc-XQjcs3u1l?usp=sharing
 
 ## Daftar Pustaka
 [1]	N. Azahro Choirunisa, T. Karlita, and R. Asmara, “Deteksi Ras Kucing Menggunakan Compound Model Scaling Convolutional Neural Network,” Technomedia J., vol. 6, no. 2, pp. 236–251, 2021, doi: 10.33050/tmj.v6i2.1704.
