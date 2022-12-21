@@ -233,10 +233,12 @@ Metrics | EfficientNet | VGG16 |
 
 Dari dua model yang telah dibuat, maka kelompok kami menggunakan model EfficientNet dikarenakan model tersebut memiliki nilai validation loss yang lebih kecil, yaitu 0.7288 dan hasil validation accuracy lebih tinggi, yaitu sebesar 0.7903, di mana hasil tersebut lebih baik dibandingkan dengan model VGG-16.
 
-## Link Project Google Colab
+## Link Project Google Colab dan Aplikasi
 #### Model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
 
 #### Model VGG-16: https://colab.research.google.com/drive/1rxApe09C5oPv0JE-udFJFc-XQjcs3u1l?usp=sharing
+
+#### Link apk: https://drive.google.com/drive/folders/1059DUFM42QpxlTFeaJXtHdrfXPGcM7GG?usp=sharing
 
 ## Daftar Pustaka
 [1]	N. Azahro Choirunisa, T. Karlita, and R. Asmara, “Deteksi Ras Kucing Menggunakan Compound Model Scaling Convolutional Neural Network,” Technomedia J., vol. 6, no. 2, pp. 236–251, 2021, doi: 10.33050/tmj.v6i2.1704.
