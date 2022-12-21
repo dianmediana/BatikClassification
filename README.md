@@ -17,7 +17,7 @@
   - [Dataset](#dataset)
   - [Model Deep Learning](#model-deep-learning)
   - [Proses Training dan Testing](#proses-training-dan-testing)
-  - [Analisis Model dan Hasil Evaluasi](#analisis-model-dan-hasil-evaluasi)
+  - [Analisis Model](#analisis-model)
   - [Link Project Google Colab](#link-project-google-colab)
   - [Daftar Pustaka](#daftar-pustaka)
   
