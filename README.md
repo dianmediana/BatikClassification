@@ -179,7 +179,7 @@ Penjelasan Data Augmentasi:
 
 Pengimplementasian algoritma VGG16 diawali dengan pembuatan base model yang selanjutnya digabungkan dengan beberapa layer seperti pada gambar di bawah ini.
 
-![image](https://user-images.githubusercontent.com/83971650/208743732-4e04308c-1646-4f3d-bab1-e3d286b32282.png)
+![image](https://user-images.githubusercontent.com/83971650/208811995-8b906152-e708-43c0-8441-8cb267de3a41.png)
 
 Penjelasan :
 
@@ -188,8 +188,10 @@ Penjelasan :
 - model.add(base_model) = menambahkan arsitektur model VGG16.
 - base_model.trainable = melakukan freeze layer untuk menghindari pre-trained weight terupdate.
 - GlobalAveragePooling2D = menambahkan global average pooling layer.
-- Dense(units=64, activation='relu') = menggunakna dense layer sebanyak 64 units dengan aktivasi relu.
+- Dense(units=512, activation='relu') = menggunakna dense layer sebanyak 64 units dengan aktivasi relu.
 - Dropout(0.2), menerapkan dropout ke input yang akan menonaktifkan 20% hidden units secara acak.
+- Flatten = mengubah matriks pada satu layer menjadi 1 kolom
+- Dense(units=128, activation='relu') = menggunakna dense layer sebanyak 64 units dengan aktivasi relu.
 - Dense(units=15, activation='softmax'), artinya menggunaknan dense layer denagn softmax activation function untuk prediksi akhir sebanyak 15 kelas.
 
 4. Evaluasi Model
