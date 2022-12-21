@@ -230,6 +230,7 @@ Metrics | EfficientNet | VGG16 |
 | val_loss | 0.7288 | 0.9497 |
 | val_accuracy | 0.7903 | 0.7661 |
 
+Dari dua model yang telah dibuat, maka kelompok kami menggunakan model EfficientNet dikarenakan model tersebut memiliki nilai validation loss yang lebih kecil, yaitu 0.7288 dan hasil validation accuracy lebih tinggi, yaitu sebesar 0.7903, di mana hasil tersebut lebih baik dibandingkan dengan model VGG-16.
 
 ## Link Project Google Colab
 #### Model EfficientNet: https://colab.research.google.com/drive/1kkSOZAMV9-g_MxRymMSrJpJq8MqvNPzf?usp=sharing
