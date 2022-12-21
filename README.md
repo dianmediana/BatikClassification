@@ -31,7 +31,7 @@ GOTIQUE merupakan sebuah aplikasi berbasis android yang dapat membantu user untu
 
 ## Arsitektur Aplikasi
 
-![image](https://user-images.githubusercontent.com/80681345/208789642-4ced7a99-74e4-49aa-a6d7-9adc01526951.png)
+![image](https://user-images.githubusercontent.com/80681345/208809017-d7cc660c-cd2a-46c0-87b5-5415d9452cd8.png)
 
 Gambar di atas merupakan arsitektur dari aplikasi Gotique. Model yang digunakan adalah EfficientNet yang dibuat menggunakan bahasa pemrograman Python. Selanjutnya, model tersebut akan di-convert dalam bentuk TFLITE dengan menggunakan TensorFlow Lite agar dapat digunakan pada aplikasi mobile. Kemudian, model dalam bentuk TFLITE tersebut akan diimplementasikan pada project android yang telah dimiliki, sehingga menghasilkan sebuah aplikasi android yang mampu melakukan klasifikasi jenis-jenis batik.
 
