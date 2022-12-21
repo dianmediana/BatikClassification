@@ -27,14 +27,14 @@ GOTIQUE merupakan sebuah aplikasi berbasis android yang dapat membantu user untu
 
 ## Cara Menjalankan Aplikasi
 
-![tutor gotique fix](https://user-images.githubusercontent.com/82147780/208819893-1fab888d-a85c-44fd-a74d-40dd4c0b5b65.png)
+![tutor gotique fixx](https://user-images.githubusercontent.com/82147780/208820293-ce2f1e8a-0ed6-4c8d-a80a-f87b67955566.png)
 
 
 ## Arsitektur Aplikasi
 
 ![image](https://user-images.githubusercontent.com/80681345/208809017-d7cc660c-cd2a-46c0-87b5-5415d9452cd8.png)
 
-Gambar di atas merupakan arsitektur dari aplikasi Gotique. Model yang digunakan adalah EfficientNet yang dibuat menggunakan bahasa pemrograman Python. Selanjutnya, model tersebut akan di-convert dalam bentuk TFLite dengan menggunakan TensorFlow Lite agar dapat digunakan pada aplikasi mobile. Kemudian, model dalam bentuk TFLite tersebut akan diimplementasikan pada project android yang telah dimiliki, sehingga menghasilkan sebuah aplikasi android yang mampu melakukan klasifikasi jenis-jenis batik.
+Gambar di atas merupakan arsitektur dari aplikasi Gotique. Model yang digunakan adalah EfficientNet yang dibuat menggunakan bahasa pemrograman Python. Selanjutnya, model tersebut akan di-convert dalam bentuk TFLITE dengan menggunakan TensorFlow Lite agar dapat digunakan pada aplikasi mobile. Kemudian, model dalam bentuk TFLITE tersebut akan diimplementasikan pada project android yang telah dimiliki, sehingga menghasilkan sebuah aplikasi android yang mampu melakukan klasifikasi jenis-jenis batik.
 
 ## Dataset
 Dataset yang digunakan adalah dataset gambar batik yang dikumpulkan secara manual dari google image yang terdiri dari 15 jenis batik, yaitu Batik Bali, Batik Betawi, Batik Celup, Batik Cendrawasih, Batik Dayak, Batik Geblek Renteng, Batik Insang, Batik Kawung, Batik Lasem, Batik Mega Mendung, Batik Pala, Batik Parang, Batik Poleng, Batik Sekar Jagad, dan Batik Tambal. Adapun total keseluruhan dataset batik yang dimiliki adalah 894 images. Berikut merupakan rincian jumlah masing-masing jenis batik yang digunakan.
